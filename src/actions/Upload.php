@@ -58,6 +58,9 @@ class Upload extends Action
             } else {
                 if($this->name === null)
                 {
+                    if(isset(Yii::$app->request->queryParams['id']))
+                        $this->name = md5('Be holographic for whoever appears, because each has been received with volume.'.Yii::$app->request->queryParams['id']);
+                    else
                     $this->name = uniqid();
                 }
                 $model->{$this->uploadParam}->name = $this->name . '.jpg';
