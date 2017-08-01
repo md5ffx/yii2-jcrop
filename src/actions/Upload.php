@@ -60,7 +60,7 @@ class Upload extends Action
                 {
                     $this->name = uniqid();
                 }
-                $model->{$this->uploadParam}->name = $this->name . '.jpg';
+                $model->{$this->uploadParam}->name = $this->name . '.' . $file->extension;
                 $request = Yii::$app->request;
                 $width = $request->post('width', $this->width);
                 $height = $request->post('height', $this->height);
