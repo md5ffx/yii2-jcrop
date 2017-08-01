@@ -36,7 +36,8 @@
                             setSelect: [x1, y1, x2, y2],
                             boxWidth: cropper.$new_photo_area.width(),
                             boxHeight: cropper.$new_photo_area.height(),
-                            keySupport: false
+                            keySupport: false,
+                            bgColor:''
                         },function () {
                             jcrop_api = this;
                         });
