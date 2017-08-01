@@ -28,7 +28,7 @@ class Jcrop extends InputWidget
         if ($this->uploadUrl === null) {
             throw new InvalidConfigException(Yii::t('jcrop', 'Missing Attribute', ['attribute' => 'uploadUrl']));
         } else {
-            $this->uploadUrl = rtrim(Yii::getAlias($this->uploadUrl), '/') . '/';
+            $this->uploadUrl = rtrim(Yii::getAlias($this->uploadUrl), '/') ;
         }
     }
     /**
